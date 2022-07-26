@@ -1,10 +1,5 @@
-#function3.py
+# function3.py
 #기본값이 있는 경우
-import re
-from tkinter import Y
-from tkinter.messagebox import RETRY
-from unittest import result
-
 
 def times(a=10, b=20):
     return a*b
@@ -14,8 +9,8 @@ print(times(5))
 print(times(5,6))
 
 #키워드인자
-def connectURi(server, port):
-     strURL ="http://" + server +":" +port
+def connectURI(server, port):
+     strURL = "http://" + server + ":" + port
      return strURL
 
 #호출
@@ -33,12 +28,12 @@ def union(*ar):
 
     #호출
 print(union("ham","egg"))
-print(union("hanm", "egg", "spam"))
+print(union("ham", "egg", "spam"))
 
 
 #정의되지 않은 인자 (필수와 옵션이 있는경우)
 def userURIBuilder(server, port, **user):
-    strURL ="http://" +server + ":" + port + "/?"
+    strURL = "http://" + server + ":" + port + "/?"
     for key in user.keys():
         strURL += key + "=" + user[key] + "&"
     return strURL
@@ -50,6 +45,6 @@ print(userURIBuilder("credu.com", "80", id="kim", passwd="1234"))
 g=lambda x,y:x*y
 print(g(3,4))
 print(g(5,6))
-print( (lambda x:x*x)(3) )
+print( (lambda x:x*x)(4) )
 print( globals() )
 
