@@ -10,4 +10,18 @@ soup =BeautifulSoup(page, "html.parser")
 #print(soup.prettify())
 #문서에 있는 <p>전부 검색
 print(soup.find_all("p"))
+#문서 첫번째 <p>검색
+print(soup.find("p"))
 
+#조건이 있는 경우
+print(soup.find_all("p", class_="outer-text"))
+
+
+#p id = first 검색
+#print(soup.find_all("p", id=first"))
+
+#태그내부의 문자열 검색
+for item in soup.find_all("p"):
+    title=item.text.strip()
+    title=title.replace("\n","")
+    print(title)
